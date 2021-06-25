@@ -1,8 +1,8 @@
 import { CardOption } from "../components/CardOption";
 import { Section } from "../components/Section";
-import cards from "../card.json";
-import './styles/AsiVamos.css'
-export function AsiVamos() {
+import cards from "../jsons/card.json";
+import '../components/styles/AsiVamos.css'
+function AsiVamos() {
     return (
         <div className="containerY">
             <Section />
@@ -14,3 +14,5 @@ export function AsiVamos() {
         </div>
     )
 }
+
+export default AsiVamos;

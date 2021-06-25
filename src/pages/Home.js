@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles/Home.css';
+import '../components/styles/Home.css';
 import ItemsParticipacion from '../components/ItemsParticipacion';
 import Eventos from '../components/Eventos';
 import Proyecto from '../components/Proyecto';

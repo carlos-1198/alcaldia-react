@@ -1,9 +1,11 @@
 import { List } from "../components/List";
 
-export function Transparencia() {
+function Transparencia() {
     return (
         <div>
             <List />
         </div>
     )
 }
+
+export default Transparencia;
