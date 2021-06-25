@@ -1,5 +1,5 @@
 import React from 'react';
-import AlcaldeJSON from '../../alcalde.json';
+import AlcaldeJSON from '../../jsons/alcalde.json';
 
 class AlcaldeBiografia extends React.Component {
     constructor(props) {

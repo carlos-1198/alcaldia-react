@@ -1,4 +1,4 @@
-import styles from "./CardOption.module.css";
+import styles from "./styles/CardOption.module.css";
 export function CardOption(props) {
   const { img, title, url } = props;
   return (

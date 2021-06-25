@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './Proyecto.css';
-import planes from '../planes.json';
+import './styles/Proyecto.css';
+import planes from '../jsons/planes.json';
 class Proyecto extends React.Component{
     render(){
         return(

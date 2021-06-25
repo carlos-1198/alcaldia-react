@@ -1,5 +1,5 @@
-import lists from '../List.json'
-import styles from './List.module.css'
+import lists from '../jsons/List.json'
+import styles from './styles/List.module.css'
 export function List() {
     return (
         <div className={styles.content_all}>

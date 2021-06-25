@@ -1,7 +1,8 @@
 import React from 'react';
-import ServicioJSON from '../../servicio.json';
+import ServicioJSON from '../../jsons/servicio.json';
 
 class ServicioSlider extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
     }
@@ -11,17 +12,28 @@ class ServicioSlider extends React.Component {
             i.push(
                 (
                     <li>
-                        <h2><a href="#">Template License</a></h2>
+                        <h2><a href="#">{value.titulo}</a></h2>
                         <div class="article-info box">
                             <p class="f-right"><a href="#" class="comment">Comments (15)</a></p>
                             <p class="f-left">October 27, 2011 | Posted by <a href="#">John Doe</a> | Filed under <a href="#">templates</a>,
                                 <a href="#">webdesign</a>, <a href="#">internet</a></p>
                         </div>
-                        <p>This is a free web template by TemplatesDock. This work is distributed under the Creative Commons Attribution 3.0 License, which means that you are free to adapt, copy, distribute and transmit the work. You must attribute the work in the manner specified by the author or licensor (don´t remove our backlink from footer). This is a free web template by TemplatesDock. This work is distributed under the Creative Commons Attribution 3.0 License, which means that you are free to adapt, copy, distribute and transmit the work. You must attribute the work in the manner specified by the author or licensor (don´t remove our backlink from footer).</p>
-                        <p><img src={`https://picsum.photos/200/300?random=${index}`} alt="" class="f-left" />Suspendisse posuere, metus eget pharetra adipiscing, arcu velit lobortis augue, quis pharetra mauris ante a velit. Duis feugiat, odio a mattis gravida, velit est euismod urna, vitae gravida elit turpis sit amet elit. Phasellus ac hendrerit tortor. Aliquam erat volutpat. Donec laoreet viverra sapien et luctus. Cras fringilla commodo nulla sit amet congue. Donec aliquam gravida elit, in fringilla urna adipiscing in. Sed vel risus id urna luctus eleifend. Morbi ut fringilla magna. Curabitur lobortis molestie tellus ac ultricies. Maecenas tempus rutrum mauris in auctor. Ut interdum diam a justo malesuada dignissim. Morbi blandit odio sed magna rhoncus tincidunt. Etiam diam neque, ornare in molestie posuere, vulputate a nisl. Donec dictum, erat vel varius ullamcorper, lorem ipsum vulputate eros, sit amet lacinia orci arcu ac mi. Cras pellentesque, lacus vel laoreet tristique, justo magna convallis ante, at pellentesque ligula sapien sit amet elit. Nulla ut nunc libero.</p>
-                        <p>This is a free web template by TemplatesDock. This work is distributed under the Creative Commons Attribution 3.0 License, which means that you are free to adapt, copy, distribute and transmit the work. You must attribute the work in the manner specified by the author or licensor (don´t remove our backlink from footer). This is a free web template by TemplatesDock. This work is distributed under the Creative Commons Attribution 3.0 License, which means that you are free to adapt, copy, distribute and transmit the work. You must attribute the work in the manner specified by the author or licensor (don´t remove our backlink from footer).</p>
-                        <p>This is a free web template by TemplatesDock. This work is distributed under the Creative Commons Attribution 3.0 License, which means that you are free to adapt, copy, distribute and transmit the work. You must attribute the work in the manner specified by the author or licensor (don´t remove our backlink from footer).</p>
-                        <p class="more"><a href="#">Read more &raquo;</a></p>
+                        <h4>Descripción:</h4>
+                        <p>{value.descripcion}</p>
+                        <p><img src={`https://picsum.photos/200/300?random=${index}`} alt="" class="f-left" />
+                            <div className="diplay-flex-card">
+                                <div className="diplay-flex-card-center">
+                                    <h4>Tipo Tramite:</h4><span>{value.gestion}</span>
+                                </div>
+                                <div className="diplay-flex-card-center">
+                                    <h4>¿Cuánto tarda el proceso?</h4><span>{value.proceso}</span>
+                                </div>
+                                <div className="diplay-flex-card-center">
+                                    <h4>¿Cual es el costo?</h4><span>{value.costo}</span>
+                                </div>
+                            </div>
+                        </p>
+                        <p><a href={value.ir}>Donde ir</a></p>
                     </li>
                 )
             );

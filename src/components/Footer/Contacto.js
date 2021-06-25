@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
-import './Contacto.css';
+import '../styles/Contacto.css';
 
 class Contacto extends React.Component{
     render(){

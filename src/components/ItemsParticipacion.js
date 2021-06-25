@@ -6,8 +6,8 @@ import { FaEdit } from "react-icons/fa";
 import { FaFileAlt } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa";
 import { FaRegCommentDots } from "react-icons/fa";
-import items from '../item.json';
-import './ItemsParticipacion.css';
+import items from '../jsons/item.json';
+import './styles/ItemsParticipacion.css';
 
 class ItemsParticipacion extends React.Component{
     state = {

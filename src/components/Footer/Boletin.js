@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Boletin.css';
+import '../styles/Boletin.css';
 import { FaRegEnvelope } from "react-icons/fa";
 class Boletin extends React.Component{
     render(){

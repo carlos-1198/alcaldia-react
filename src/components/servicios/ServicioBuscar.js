@@ -1,8 +1,18 @@
 import React from 'react';
+import $ from "jquery";
 
 class ServicioBuscar extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
+    }
+
+    filter(e){
+        var value = e.target.value;
+        // eslint-disable-next-line array-callback-return
+        $("#servicios-table tr").filter(function(){
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
     }
 
     render() {
@@ -11,12 +21,11 @@ class ServicioBuscar extends React.Component {
                 <div className="tramite-buscarserv">
                     <h2>¿QUE ESTAS BUSCANDO?</h2>
                     <div>
-                        <input type="text" className="text" ></input>
-                        <button>Buscar</button>
+                        <input type="text" className="text" onChange={this.filter}></input>
                     </div>
                 </div>
                 <br></br>
-                <table className="tramite-table">
+                <table className="tramite-table" id="servicios-table">
                     <thead>
                         <tr><th><h2>Servicios </h2> </th>
                             <th> <h2>Población</h2></th>

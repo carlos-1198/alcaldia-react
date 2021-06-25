@@ -1,7 +1,7 @@
 import React from 'react';
 import AlcaldeBiografia from './alcalde/AlcaldeBiografia';
 import AlcaldeSecretaria from './alcalde/AlcaldeSecretaria';
-import AlcaldeCSS from '../css/Alcalde.css';
+import './styles/Alcalde.css';
 
 class Alcalde extends React.Component {
     constructor(props) {

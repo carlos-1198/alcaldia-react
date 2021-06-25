@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Redes.css';
+import './styles/Redes.css';
 class Redes extends React.Component{
     render(){
         return(

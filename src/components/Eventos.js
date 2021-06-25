@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './Eventos.css';
-import eventos from '../eventos.json';
+import './styles/Eventos.css';
+import eventos from '../jsons/eventos.json';
 import imagen from "../images/eventos/1.jpg";
 class Eventos extends React.Component{
     render(){

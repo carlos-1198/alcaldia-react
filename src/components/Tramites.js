@@ -4,7 +4,7 @@ import { FaCar } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { FaCalculator } from "react-icons/fa";
 
-import './Tramites.css';
+import './styles/Tramites.css';
 class Tramites extends React.Component{
     render(){
         return(

@@ -1,9 +1,24 @@
 import React from 'react';
 
-import noticias from '../Noticias.json';
-import './Noticia.css';
+import './styles/Noticia.css';
 class Noticias extends React.Component{
-    render(){
+    state = {
+        data: [],
+        url: 'http://seminarioalcaldia-env.eba-ws2bjadt.us-east-1.elasticbeanstalk.com/',
+    };
+    
+    componentDidMount(){
+        this.fetchNews();
+    }
+
+    fetchNews = async () => {
+        const response = await fetch(`${this.state.url}noticia`);
+        const data = await response.json();
+        this.setState({
+            data : data,
+        });
+    }
+    render(){  
         return(
             <div className="dark-back">
                 <div className="container">
@@ -12,15 +27,15 @@ class Noticias extends React.Component{
                     </div>
                     <div className="row ">
                     {
-                        noticias.map((noticia) => (
-                            <div key={noticia.id} className="news-card col-sm-12 col-md-6 col-lg-4">
+                        this.state.data.map((noticia) => (
+                            <div key={noticia.idNoticia} className="news-card col-sm-12 col-md-6 col-lg-4">
                                 <div className="card ">
                                     <div className="overflow">
-                                    <img className="card-img-top" src={noticia.image} alt="Card image cap"/>
+                                    <img className="card-img-top" src= {`${this.state.url}uploads/${noticia.fotos[0].descripcion}`} alt="Card image cap"/>
                                     </div>
                                         <div className="card-body dark-back">
-                                            <h5 className="new-title">{noticia.tittle}</h5>
-                                            <p className="light-back">{noticia.fecha}</p>
+                                            <h5 className="new-title">{noticia.descripcion}</h5>
+                                            <p className="light-back">{noticia.titulo}</p>
                                         </div>
                                 </div>
                             </div>
