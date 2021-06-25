@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Layout from './Layout';
+import NotFound from '../pages/NotFound';
+import Home from '../pages/Home';
+import WhatToDo from '../pages/WhatToDo';
+import { AsiVamos }  from '../pages/AsiVamos';
+import { Transparencia } from '../pages/Transparencia';
+import  Mayor  from '../pages/Mayor';
+import Services from '../pages/Services';
+import Login from './Login.js';
+
+function App(){
+    return (
+        <BrowserRouter>
+            <Layout>
+                <Switch>
+                    <Route exact path='/' component={Home}/>
+                    <Route exact path='/Home' component={Home}/>
+                    <Route exact path='/QueHacer' component={WhatToDo}/>
+                    <Route exact path='/AsiVamos'>
+                        <AsiVamos/>
+                    </Route>
+                    <Route exact path='/Transparencia'>
+                        <Transparencia/>
+                    </Route>
+                    <Route exact path='/Alcalde'>
+                        <Mayor/>
+                    </Route>
+                    <Route exact path='/Servicios'>
+                        <Services/>
+                    </Route>
+					<Route exact path='/Login'>
+                        <Login />
+                    </Route>
+                    <Route component={NotFound}/>
+                </Switch>
+            </Layout>
+        </BrowserRouter>
+    );
 }
 
 export default App;
